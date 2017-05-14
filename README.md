@@ -24,3 +24,5 @@ Ignoring unknown word: fette
 .
 .
 ```
+
+(Currently just processing a single sentence from command line. Will easily add batch reading of senteces soon)
