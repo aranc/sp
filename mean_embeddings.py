@@ -1,3 +1,4 @@
+import sys
 import numpy as np
 
 try:
@@ -22,3 +23,4 @@ def compute_mean_embeddings(sent):
         return 0
     return sum_embeddings / num_embeddings
 
+print compute_mean_embeddings(" ".join(sys.argv[2:]))
