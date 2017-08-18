@@ -5,7 +5,8 @@ try:
     guard
 except:
     print ("Loading data.")
-    data = np.loadtxt("data/paragram-phrase-XXL.txt", dtype="object")
+    with open("data/paragram-phrase-XXL.txt", encoding='latin-1') as fh:
+        data = np.loadtxt(fh, dtype="object")
     words = {_[1]:_[0] for _ in enumerate(data[:,0])}
     embeddings = data[:,1:].copy().astype("float64")
     guard = None
